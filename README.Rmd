@@ -39,3 +39,13 @@ Per <- plants %>%
 Per
 ```
 
+## resumen de especies por paises
+
+```{r}
+Resumen <- plants %>%
+  dplyr::filter(continent == "South America") %>% 
+  group_by(country) %>% 
+  summarise(n_species = n())
+Resumen
+```
+
