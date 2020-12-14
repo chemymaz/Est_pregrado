@@ -1,0 +1,14 @@
+---
+title: "Trabajo con plantas extintas"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introducción
+
+En este documento trabajaremos para explorar la identidad de plantas que se encuentran extintas en silvestría o totalmente extintas según la IUCN
+
+## Subtítulo
