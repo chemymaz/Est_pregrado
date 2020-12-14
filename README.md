@@ -44,3 +44,28 @@ plants <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tid
     ##   red_list_category = col_character()
     ## )
     ## ℹ Use `spec()` for the full column specifications.
+
+## Filtrando los datos para resolver el ejemplo 1
+
+El código que voy a ejecutar ahora es para resolver el problema en el
+siguiente
+[slide](https://derek-corcoran-barrios.github.io/CursoProgrPres/Clase2/Clase2InvestigacionReproducible.html#29),
+para poner dentro de la base de datos, solo datos de Chile (Perú) y solo
+usar las columnas para país (*country*), la de especie
+(*binomial\_name*) y la categoría de IUCN (*red\_list\_category*)
+
+``` r
+Per <- plants %>% 
+  dplyr::filter(country == "Peru") %>% 
+  dplyr::select(binomial_name, country, red_list_category)
+
+Per
+```
+
+    ## # A tibble: 4 x 3
+    ##   binomial_name        country red_list_category  
+    ##   <chr>                <chr>   <chr>              
+    ## 1 Brugmansia arborea   Peru    Extinct in the Wild
+    ## 2 Brugmansia insignis  Peru    Extinct in the Wild
+    ## 3 Brugmansia sanguinea Peru    Extinct in the Wild
+    ## 4 Pradosia argentea    Peru    Extinct
